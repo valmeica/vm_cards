@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+ <head>
+  <link rel="stylesheet" href="animate.min.css">
+</head>
+
+<body>
+  <header>
+     <h1 class="animated shake">V-Cards</h1>
+     <h3 class="animated bounceInRight">Keep your business contacts in your hand.</h3>
+    <div class="animated rubberBand" ></div>
+     <button type="button" class="btn btn-secondary"><%= link_to 'New Card', new_card_path %></button>
+     <button type="button" class="btn btn-secondary">	<%= link_to "Home", cards_path %></button>
+  </div>
+  </header> 
+
+|
+
+
+<p class="breadcrumb">
+</p>
+
+<div class="image_container">
+
+	    
+<article>
+	<h1><%= @card.name %></h1><br>
+
+<div class ="img">
+	<%= image_tag @card.image.url, :class => "image_show" %><br>
+</div>	
+<p>
+  <strong>Description:</strong>
+  <%= @card.description %>
+</p><br>
+
+	<button type="button" class="btn btn-danger">
+	    <%= link_to "Delete", @card, :method => :delete %></button> 
+	   <button type="button" class="btn btn-warning"> 
+	    <%= link_to "Edit", edit_card_path(@card) %></button>
+	 </button>   
+	 <button type="button" class="btn btn-secondary"><%= link_to 'Back', cards_path %></button>
+	 </article>
+	 
+</div>
+	 
+
+
+	<footer>
+		Footer <br>
+		This app was created as part of software development class prject.<br>
+		All rights reserved.
+		
+	</footer>
+</body>

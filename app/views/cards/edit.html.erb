@@ -1,0 +1,33 @@
+<head>
+  <link rel="stylesheet" href="animate.min.css">
+</head>
+<body>
+  <header>
+     <h1 class="animated shake">V-Cards</h1>
+     <h3 class="animated bounceInRight">Keep your business contacts in your hand.</h3>
+     <button type="button" class="btn btn-secondary"><%= link_to 'New Card', new_card_path %></button>
+     <button type="button" class="btn btn-secondary">	<%= link_to "Home", cards_path %></button>
+  </header> 
+  
+  
+<p class="breadcrumb">
+</p>
+
+<div class="image_container">
+
+<h1>Editing Card</h1>
+<div class="image_container">
+ <%= render 'form' %>
+</div>
+ <button type="button" class="btn btn-secondary"><%= link_to 'Show', @card %> </button>
+ <button type="button" class="btn btn-secondary"><%= link_to 'Back', cards_path %></button>
+</div>
+
+
+	<footer>
+		Footer <br>
+		This app was created as part of software development class prject.<br>
+		All rights reserved.
+		
+	</footer>
+</body>

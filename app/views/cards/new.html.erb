@@ -1,0 +1,45 @@
+<head>
+  <link rel="stylesheet" href="animate.min.css">
+</head>
+
+
+<body>
+  <header>
+     <h1 class="animated shake">V-Cards</h1>
+     <h3 class="animated bounceInRight">Keep your business contacts in your hand.</h3>
+     <button type="button" class="btn btn-secondary"><%= link_to 'New Card', new_card_path %></button>
+     <button type="button" class="btn btn-secondary">	<%= link_to "Home", cards_path %></button>
+  </header> 
+
+
+
+	<div id="main">
+		
+		<article>
+			<div class="Row">
+				<div class="Grid">
+					<div class="Grid--1ofX">
+						<div class="image_container">
+  <h1>New Card</h1>
+  <%= render 'form' %>
+  <button type="button" class="btn btn-secondary"><%= link_to 'Back', cards_path %></button>
+  <br>
+                      </div>
+					</div>
+				</div>
+			</div>
+		</article>
+	
+		<aside>
+			Information about the cards to be uploaded 
+			Example: <font class="red">Files must be less than 1.5megabites!</font>
+		</aside>
+	</div>
+ 
+	<footer>
+		Footer <br>
+		This app was created as part of software development class prject.<br>
+		All rights reserved.
+		
+	</footer>
+</body>

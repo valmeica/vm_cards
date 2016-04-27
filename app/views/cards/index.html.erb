@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<head>
+  <link rel="stylesheet" href="animate.min.css">
+</head>
+
+<body>
+	<header>
+		
+		<h1 class="animated pulse">V-Cards</h1>
+<h3 class="animated rubberBand">Keep your business contacts in your hand.</h3>
+<button type="button" class="btn btn-secondary"><%= link_to 'New Card', new_card_path %></button>
+</header>
+
+	<div id="main">
+		<article>
+			<div class="Row">
+				<div class="Grid">
+					<div class="Grid--1ofX">
+					  
+<article class="animated bounce">
+    <% @array.each do |row| %>
+		<div class="animated flipInX" class="Row">
+			<div class="Grid">
+				<% row.compact.each do |p| %>
+					<div class="Grid--1ofX">
+						<a href="/cards/<%= p.id %>"><%= image_tag p.image.url %></a>
+					</div>
+				
+				<% end %>
+			</div>
+		</div>
+	<% end %>
+
+</article>
+
+
+<br>
+
+<button type="button" class="btn btn-primary"><%= link_to 'Add New Card', new_card_path %></button>
+	               </div>
+				   </div>
+			    </div>
+		</article>
+	
+  <aside>
+			<h2 class="animated bounceInRight">Latest News Of Business World</h2>
+			
+			Some verry important news from the business world!<br>
+			<img class ="img" src="http://ownbond.com/wp-content/uploads/2014/02/raise-money-business-finance.jpg" width= "260" height"160"><br>
+			<p>Apple Inc. detailed its first decline in iPhone sales Tuesday, part of an earnings report that 
+			   broke up more than a decade of continued growth for the tech giant. 
+			   To cure Apple’s  growth problems, Chief Executive Tim Cook suggested he may go shopping.</p>
+			
+  </aside>
+</div>
+ 
+	<footer>
+		Footer <br>
+		This app was created as part of software development class prject.<br>
+		All rights reserved.
+		
+	</footer>
+</body>
